@@ -2,7 +2,6 @@ import Image from "next/image";
 
 import { styled } from "@mui/system";
 import { Box } from "@mui/system";
-import { typography } from "@mui/system";
 
 import { MainLogo } from "../../assets/images";
 
@@ -19,15 +18,29 @@ const NavMenu = styled('ul')({
 });
 
 const NavLinks = styled('li')({
-    marginRight: 15,
+    marginRight: '30px',
     listStyleType: 'none',
-    fontFamily: 'Gotham Pro'
+    fontSize: '14px',
+    fontWeight: 400,
+    lineHeight: '13px',
+    color: '#EEE4FF',
+    textTransform: 'uppercase',
+    '&:last-child': {
+        lineHeight: '40px',
+        width: '190px',
+        background: '#101C2B',
+        border: '1px solid #EEE4FF',
+        borderRadius: '5px',
+        textAlign: 'center'
+    }
 })
 
 const AppNavigation = () => {
     return (
         <NavWrapper>
-            <Box>
+            <Box sx={{
+                marginRight: '60px'
+            }}>
                 <a href="#">
                     <Image src={MainLogo}/>
                 </a>
