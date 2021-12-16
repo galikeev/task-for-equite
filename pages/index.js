@@ -53,6 +53,15 @@ export default function Home() {
           }
         }
 
+        ul,
+        li,
+        dl,
+        ol {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
         * {
           box-sizing: border-box;
         }

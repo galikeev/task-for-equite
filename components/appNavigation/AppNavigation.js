@@ -32,6 +32,14 @@ const NavLinks = styled('li')({
         border: '1px solid #EEE4FF',
         borderRadius: '5px',
         textAlign: 'center'
+    },
+    '@media (max-width: 991px)': {
+        fontSize: '12px',
+        marginRight: '10px',
+        '&:last-child': {
+            width: '120px',
+            lineHeight: '30px',
+        }
     }
 })
 
@@ -39,13 +47,20 @@ const AppNavigation = () => {
     return (
         <NavWrapper>
             <Box sx={{
-                marginRight: '60px'
+                marginRight: '60px',
+                '@media (max-width: 1199px)': {
+                    marginRight: '15px'
+                }
             }}>
                 <a href="#">
                     <Image src={MainLogo}/>
                 </a>
             </Box>
-            <NavMenu>
+            <NavMenu sx={{
+                '@media (max-width: 767px)': {
+                    display: 'none'
+                }
+            }}>
                 <NavLinks>
                     <a href="#">Главная</a>
                 </NavLinks>
@@ -62,6 +77,16 @@ const AppNavigation = () => {
                     <a href="#price">Инвестору</a>
                 </NavLinks>
             </NavMenu>
+            <Box sx={{
+                display: 'none',
+                fontSize: '20px',
+                color: '#FFFFFF',
+                '@media (max-width: 767px)': {
+                    display: 'block'
+                }
+            }}>
+                EQUITE.IO
+            </Box>
         </NavWrapper>
     );
 }

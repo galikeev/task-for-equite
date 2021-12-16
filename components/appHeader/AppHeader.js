@@ -6,7 +6,10 @@ import { styled } from "@mui/system";
 const Header = styled('header')({
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    '@media (max-width: 767px)': {
+        paddingTop: '10px'
+    }
 })
 
 const AppHeader = () => {

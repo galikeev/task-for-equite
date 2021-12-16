@@ -15,6 +15,14 @@ const Button = styled('button')({
         background: '#5040B2',
         boxShadow: '0px 0px 20px rgba(188, 79, 255, 0.7)',
         color: '#FFFFFF',
+    },
+    '@media (max-width: 991px)': {
+        width: '98px',
+        height: '30px',
+        fontSize: '12px'
+    },
+    '@media (max-width: 767px)': {
+        display: 'none'
     }
 })
 
@@ -33,6 +41,15 @@ const BigButton = styled('button')({
         background: '#5040B2',
         boxShadow: '0px 0px 20px rgba(188, 79, 255, 0.7)',
         color: '#FFFFFF',
+    },
+    '@media (max-width: 991px)': {
+        width: '177px',
+        height: '40px',
+        fontSize: '12px'
+    },
+    '@media (max-width: 767px)': {
+        width: '140px',
+        height: '50px',
     }
 })
 
